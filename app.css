@@ -1,3 +1,38 @@
+@font-face {
+    font-family: "Philo";
+    src: url("font/Philosopher-Regular.ttf") format("opentype") ,
+
+  }
+
+  .loadingPage{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    color:white;
+    font-size: 5rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.loader{
+    overflow: hidden;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingActive{
+    transform: translateY(100%);
+    transition: transform 0.2s linear;
+    overflow: hidden;
+}
+
 a{
     text-decoration: none;
     color:rgb(0, 255, 136)
@@ -7,27 +42,52 @@ a{
    width: 100%;
    display: flex;
    flex-direction: column;
+   position: relative;
+   background-color: black;
 }
+
 
 
 body{
     background-color: black;
     padding:0;
-    margin:0
+    margin:0;
+    position: relative;
+    scrollbar-width: none;
 }
+
+.body::-webkit-scrollbar {
+    display: none;
+    font-family: 'Philo';
+  }
+  
+  /* Pour Firefox */
+ 
 
 #vara-container{
     width: 100%;
     margin-top: 50px;
+    color:white;
+    text-align: left;
+    font-size: 1.5rem;
+    
+}
+
+.texteMotivation{
+    padding:0 2rem;
 }
 
 .informations{
     width: 100%;
     background-color: rgb(0, 0, 0);
+    transform: translateX(-100%);
  
-  
 }
 
+.active{
+    transform: translateX(0);
+    transition: transform 0.4s linear;
+}
 .containerInformations{
     width: 100%;
 }
@@ -134,13 +194,19 @@ height: 100%;
 
 .informations{
     width: 30%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
+    z-index: 2;
+}
+
+dt,dd{
+    font-size: 1.5vw;
 }
 
 .containerInformations{
     position: relative;
     width: 30%;
+    height: 100vh;
 }
 
 #vara-container{
@@ -163,11 +229,14 @@ dl{
     width: 25%;
     height: 100vh;
     position: fixed;
+    top:0;
+    z-index: 2;
 }
 
 .containerInformations{
     position: relative;
     width: 25%;
+    height: 100vh;
 }
 
 #vara-container{
